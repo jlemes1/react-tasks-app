@@ -1,5 +1,11 @@
+import TaskList from "./TaskList";
+
 function Testing() {
-  return <div>Testing</div>;
+  return (
+    <div>
+      <TaskList />
+    </div>
+  );
 }
 
 export default Testing;
