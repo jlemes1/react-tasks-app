@@ -1,6 +1,6 @@
-import TaskForm from './TaskForm';
-import TaskList from './TaskList';
-import { tasks as data } from './tasks';
+import TaskForm from './components/TaskForm';
+import TaskList from './components/TaskList';
+import { tasks as data } from './data/tasks';
 import { useState, useEffect } from 'react';
 
 function TaskManager() {
