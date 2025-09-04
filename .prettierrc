@@ -18,6 +18,6 @@
   "printWidth": 80,
   "requirePragma": false,
   "tabWidth": 2,
-  "useTabs": true,
+  "useTabs": false,
   "embeddedLanguageFormatting": "auto"
 }
