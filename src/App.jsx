@@ -26,10 +26,12 @@ function TaskManager() {
   }
 
   return (
-    <>
-      <TaskForm createTask={createTask} />
-      <TaskList tasks={tasks} deleteTask={deleteTask} />
-    </>
+    <main className='bg-zinc-900 h-screen'>
+      <div className='container mx-auto'>
+        <TaskForm createTask={createTask} />
+        <TaskList tasks={tasks} deleteTask={deleteTask} />
+      </div>
+    </main>
   );
 }
 
