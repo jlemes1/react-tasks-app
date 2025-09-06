@@ -25,11 +25,25 @@ function TaskManager() {
     setTasks(tasks.filter((task) => task.id !== taskId));
   }
 
+  function editTask(taskId, updatedTask) {
+    setTasks(
+      tasks.map((task) =>
+        task.id === taskId
+          ? {
+              ...task,
+              title: updatedTask.title,
+              description: updatedTask.description,
+            }
+          : task,
+      ),
+    );
+  }
+
   return (
     <main className='bg-zinc-900 h-screen'>
       <div className='container mx-auto'>
         <TaskForm createTask={createTask} />
-        <TaskList tasks={tasks} deleteTask={deleteTask} />
+        <TaskList tasks={tasks} deleteTask={deleteTask} editTask={editTask} />
       </div>
     </main>
   );

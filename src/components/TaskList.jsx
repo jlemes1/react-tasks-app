@@ -1,6 +1,6 @@
 import TaskCard from './TaskCard';
 
-function TaskList({ tasks, deleteTask }) {
+function TaskList({ tasks, deleteTask, editTask }) {
   if (tasks.length === 0) {
     return (
       <h1 className='text-4xl font-bold text-white text-center'>
@@ -12,7 +12,12 @@ function TaskList({ tasks, deleteTask }) {
   return (
     <div className='grid grid-cols-4 gap-4'>
       {tasks.map((task) => (
-        <TaskCard key={task.id} task={task} deleteTask={deleteTask} />
+        <TaskCard
+          key={task.id}
+          task={task}
+          deleteTask={deleteTask}
+          editTask={editTask}
+        />
       ))}
     </div>
   );
