@@ -1,6 +1,10 @@
 import ModalCard from './ModalCard';
+import { useContext } from 'react';
+import { TaskContext } from '../context/TaskContext';
 
-function TaskCard({ task, deleteTask, editTask }) {
+function TaskCard({ task }) {
+  const { deleteTask, editTask } = useContext(TaskContext);
+
   return (
     <div className='bg-neutral-700 text-white rounded-sm p-4 text-center'>
       <h1 className='text-2xl font-bold uppercase'>{task.title}</h1>
